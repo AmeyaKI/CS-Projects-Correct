@@ -3,7 +3,7 @@ import java.util.Random;
 public class Firetype extends Pokemon{
 
 
-    //constructor that intializes the name, atkpower, hp, and type to fire sets hp and maxhp to hp
+    //constructor: intializes  name, atkpower, hp, and type to fire sets hp and maxhp to hp
     public Firetype(String n,int atk, int h){
       super(n, atk, h);
       setType("fire");
