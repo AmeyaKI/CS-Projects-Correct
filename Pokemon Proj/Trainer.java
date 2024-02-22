@@ -33,11 +33,6 @@ public class Trainer{
 
     }
     
-    
-      //check to see  if the enemy pokemon has 0 or less hp if so, set faintStatus to True.
-    // make them switch pokemon if they still have nonfainted pokemon (randomly pick a nonfainted pokemon). 
-    // If they have no more NONFAINTED pokemon in party, set leadpokemon to null.
-    
   }
   public void potion(){
       leadpokemon.heal();
