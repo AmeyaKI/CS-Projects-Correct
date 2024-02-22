@@ -9,7 +9,7 @@ public class Pokemon{
 
     
   
-    //constructor that intiates name to "", atkpower to 0, hp and maxHP to 0 and type to "normal"
+    //constructor: intiates name to "", atkpower to 0, hp and maxHP to 0 and type to "normal"
     public Pokemon(){
       name = "";
       atkpower = 0;
@@ -18,19 +18,19 @@ public class Pokemon{
       type = "normal";
     }
   
-  //constructor that intiates name, atkpower, and hp and maxHP (hp and maxHP should be set to h)
+  //constructor: intiates name, atkpower, and hp and maxHP (hp and maxHP should be set to h)
     public Pokemon(String n, int atk, int h){
       name = n;
       atkpower = atk;
       hp = h;
       maxhp = h;
     }
-    //sets type of pokemon
+    // "Setter": sets type of pokemon
     public void setType(String t){//code goes here
       type = t;
     }
   
-    //returns type of pokemon
+    // "Getter": returns type of pokemon
     public String getType(){
       return type;
     }
@@ -60,17 +60,7 @@ public class Pokemon{
     public void setFaintstatus(){
       faint= true;
     }
-  
-    /* attack should call the getAttackpwr method and decrease the hp of the enemy pokemon. 
-    Attack damage formula is equal to attack* effectiveness multiplier super effective is *2 damage, 
-    not very effective is divide by 2, same type equals *1 multiplier
-    */
-      //grass>water
-      //water> fire
-      //fire > grass
-      //Should also call the attackMoveName() method which will randomly pick an attack name 
-      // that is used. Should print out how much damage was done, if it was super effective 
-      // or not very effective, and how much hp the enemy pokemon has after the attack.
+    // attack
     public void attack(Pokemon enemy){
       int damage;
       if(getType().equals("fire") && enemy.getType().equals("fire")) {
@@ -126,10 +116,7 @@ public class Pokemon{
     public String attackMoveName(){
       return "tackle";
     }
-    //randomly picks from list of "potion","super potion",and "hyper potion"
-    //potion heals 30, super potion heals 50, and hyper potion heals 100
-    //pokemon should not be healed over max hp, if it is, set it to the maxhp. 
-    // Should print out "pokemon used (insert potion). It now has (insert hp) hp.
+    // heals
     public void heal(){
       String potions[]={"potion", "super potion","hyper potion"};
       Random rand = new Random();
@@ -157,7 +144,6 @@ public class Pokemon{
       }
     }
   
-  //format should be name:attack:hp:type
     public String toString(){
       String result = "" + name + ":" + atkpower + ":" + hp + ":" + type;
       return result;      
