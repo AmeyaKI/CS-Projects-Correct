@@ -1,12 +1,10 @@
 import java.util.*;
 public class Watertype extends Pokemon {
 
-//constructor that intializes the name, atkpower, hp, and type to water sets hp and maxhp to hp
+//constructor: intializes  name, atkpower, hp, and type to water sets hp and maxhp to hp
 public Watertype(String n,int atk, int h){
   super(n, atk, h);
   setType("water");
-
-  //code goes here 
   }
 
 
@@ -16,7 +14,6 @@ public String attackMoveName(){
   Random rand = new Random();
   int randomInteger = rand.nextInt(3);
   return list[randomInteger];
-//code goes here
   
   }
 }
