@@ -7,7 +7,6 @@ public class Firetype extends Pokemon{
     public Firetype(String n,int atk, int h){
       super(n, atk, h);
       setType("fire");
-    //code goes here 
     }
     
     
